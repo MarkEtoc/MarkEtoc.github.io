@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Staatliches', serif;
+}
+.maincontainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.mainbg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: left;
+    filter: brightness(0.5);
+    position: absolute;
+}
+.mainbg .mainpcon {
+    position: absolute;
+    left:5%;
+    top: 40%;
+    width: 60%;
+    height: auto;
+}
+.mainbg .mainpcon p:first-child {
+    color: yellow;
+    font-size: 30px;
+}
+.mainbg .mainpcon p:nth-child(2) {
+    color: white;
+    font-size: 20px;
+}
+.mainbg button {
+    background-color: transparent;
+    padding: 5px 15px;
+    border: 1px groove yellow;
+    color: yellow;
+    font-size: 18px;
+}
+.mainbg button:hover {
+    background-color: yellow;
+    color: black;
+}
+:root {
+    --color1: transparent;
+    --color2: rgb(49, 49, 49);
+}
+#mainheader {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(66, 66, 66);
+}
+#mainheader p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    color: yellow;
+}
+#mainheader img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-70%);
+    width: 70px;
+    height: 70px;
+}
+#mainheader .fa-bars {
+    position: absolute;
+    left: 20px;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#mainheader .fa-shopping-cart {
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#mainheader i {
+    color: yellow;
+}
+#checkbox {
+    display: none;
+}
+#checkbox:checked ~ .resnav{
+    left: 0;
+}
+.resnav {
+    width: 90%;
+    height: 85vh;
+    background-color: rgb(66, 66, 66);
+    position: fixed;
+    top: 15vh;
+    left: -100%;
+    z-index: 3;
+    transition: left .1s ease-out;
+
+}
+.resnav ul {
+    list-style-type: none;
+}
+.resnav ul a {
+    text-decoration: none;
+    line-height: 30px;
+}
+.resnav ul a li {
+    font-size: 18px;
+    font-family: 'Staatliches', serif;
+    color: rgb(66, 66, 66);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.resnav ul a li:hover {
+    background-color: rgb(66, 66, 66);
+    color: rgb(214, 178, 0)
+}
+.resnav ul a li:hover i {
+    color: rgb(214, 178, 0)
+}
+.resnav ul a li i {
+    position: absolute;
+    right: 10px;
+    color: rgb(214, 178, 0)
+}
+.resnav .second {
+    position: absolute;
+}
+.resnav .category {
+    width: fit-content;
+    border-bottom: rgb(66, 66, 66);
+    font-size: 20px;
+}
+nav {
+    display: none;
+}
+/* second page */
+.featuredcontainer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    top: 10vh;
+}
+.featuredcontainer > p {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(66, 66, 66);
+    font-weight: bolder;
+}
+.featuredcontainer span {
+    color: rgb(214, 178, 0);
+}
+.featured { 
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(250px,250px);
+    grid-row-gap: 30px;
+    grid-template-areas: 
+    "onef onef onef onef"
+    "twof twof twof twof"
+    "threef threef threef threef"
+    "fourf fourf fourf fourf";
+}
+.featured div {
+    background-size: cover;
+    position: relative;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.featured div p:first-child {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    background-color: rgb(66, 66, 66);
+    font-size: 22px;
+    color: yellow;
+}
+.featured div p:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.onefeatured {
+    grid-area: onef;
+    background-image: url(typhoon-detail.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.twofeatured {
+    grid-area: twof;
+    background-image: url(600.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.threefeatured {
+    grid-area: threef;
+    background-image: url(crescent-adjustable-wrenches-ac212vs-64_1000.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.fourfeatured {
+    grid-area: fourf;
+    background-image: url(STA065011.jpeg.jpg);
+    background-size: cover;
+    background-position: bottom center;
+}
+/*third page */
+.sale {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30vh;
+    width: 95%;
+    height: auto;
+}
+.salecon {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(150px,150px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas: 
+    "sale1 sale1 sale1"
+    "sale2 sale2 sale2"
+    "sale3 sale3 sale3";
+}
+.salecon p {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.salecon span {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.salecon a {
+    text-decoration: none;
+}
+.salecon div {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sale1 {
+    grid-area: sale1;
+    background-image: url(48683990998_a1c16c7a933_b.jpg);
+    position: relative;
+}
+.sale1 span {
+    color: red;
+}
+.sale2 {
+    grid-area: sale2;
+    background-image: url(tools-on-red-background.sml_.jpg);
+    position: relative;
+}
+.sale2 p {
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sale2 span {
+    color: red;
+}
+.sale2 p:last-child {
+    width: fit-content;
+    padding: 0px 10px;
+    background-color: rgb(66, 66, 66);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sale2p 1s infinite;
+}
+@keyframes sale2p {
+    0% {
+        color: yellow;
+    }
+    1% {
+        color: yellow;
+    }
+    49% {
+        color: yellow;
+    }
+    50% {
+        color: white;
+    }
+    51% {
+        color: white;
+    }
+    99% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
+}
+.sale3 {
+    grid-area: sale3;
+    background-image: url(tools-screwdriver-wrench-orange-background_98837-36.jpg);
+    position: relative;
+}
+.sale3 p {
+    text-align: right;
+}
+.sale3 p:last-child {
+    width: fit-content;
+    padding: 0px 15px;
+    color: white;
+    position: absolute;
+    right: 10px;
+    background-color: rgb(66, 66, 66);
+    animation-name: sale3p;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.sale3 span {
+    color: red;
+}
+@keyframes sale3p {
+    0% {
+        color: yellow;
+    }
+    1% {
+        color: yellow;
+    }
+    49% {
+        color: yellow;
+    }
+    50% {
+        color: white;
+    }
+    51% {
+        color: white;
+    }
+    99% {
+        color: white;
+    }
+    100% {
+        color: white;
+    }
+}
+.aboutus {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 45vh;
+}
+.aboutus > p {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(66, 66, 66);
+    font-weight: bolder;
+}
+.aboutus span {
+    color: rgb(214, 178, 0)
+}
+.aboutuscon {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.aboutimg {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-image: url(Depositphotos_87441052_m-2015-1280x720.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.abouttext {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    word-break: break-all;
+}
+.abouttext p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(177, 177, 177);
+    background-color: rgb(66, 66, 66);
+    padding: 5px;
+}
+/* 5th page */
+.articles {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60vh;
+    width: 100%;
+    height: auto;
+}
+.articles > p {
+    text-align: center;
+    font-size: 35px;
+    color: rgb(66, 66, 66);
+    font-weight: bolder;
+}
+.articles span {
+    color: rgb(214, 178, 0)
+}
+.articlescon {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1,fr);
+    grid-column-gap: 5px;
+    grid-auto-rows: minmax(50vh, 50vh);
+    grid-row-gap: 10px;
+    justify-items: center;
+}
+.articlescon div {
+    background-color: yellow;
+}
+.articlescon img {
+    width: 100%;
+    height: 80%;
+}
+.articlescon p {
+    text-align: center;
+    font-family: serif;
+    color: rgb(66, 66, 66);
+}
+.articlescon a {
+    text-decoration: none;
+    color: rgb(231, 231, 231);
+    background-color: rgb(66, 66, 66);
+    padding: 0px 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* 6th page */
+.newsletter {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 75vh;
+}
+.newslettercon {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgb(66, 66, 66);
+    position: relative;
+}
+.newslettercon p:first-child {
+    margin-left: 5px;
+    color: rgb(233, 233, 64);
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+}
+.newslettercon p {
+    margin-left: 5px;
+    color: rgb(231, 231, 231);
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inputcon {
+    width: 95%;
+    height: auto;
+    position: relative;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.newslettercon .email {
+    width: 85%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+    padding: 2.5px 0px;
+}
+.newslettercon .submit {
+    width: 15%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: none;
+    padding: 2.5px 0px;
+    background-color: rgb(233, 233, 64);
+}
+.footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 85vh;
+}
+.footercon {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: minmax(25vh, auto);
+    grid-row-gap: 10px;
+    background-color: rgb(66, 66, 66);
+    justify-items: center;
+}
+.footercon i {
+    color: white;
+    padding: 0px 2px;
+}
+.footer i:hover {
+    color: rgb(233, 233, 64);
+}
+.footercon a {
+    color: white;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footercon a:hover {
+    color: rgb(233, 233, 64);
+}
+.footercon p {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    color: rgb(233, 233, 64);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.footercon ul {
+    text-align: center;
+    list-style-type: none;
+}
+.footercon ul li {
+    line-height: 25px;
+}
+@media (max-height: 380px) {
+    #mainheader img {
+        width: 50px;
+        height: 50px;
+    }
+    #mainheader p {
+        font-size: 1em;
+    }
+}
+@media (min-width: 400px) {
+    .featured {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: minmax(40vh,40vh);
+        grid-row-gap: 30px;
+        grid-template-areas: 
+        "onef twof"
+        "threef fourf";
+    }
+    .salecon {
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: minmax(150px,150px);
+        grid-row-gap: 10px;
+        grid-template-areas: 
+        "sale1 sale1 sale1 sale1"
+        "sale2 sale2 sale3 sale3";
+    }
+    .articlescon {
+        grid-template-columns: repeat(2,1fr);
+        width: 98%;
+    }
+    .newsletter {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footercon {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: minmax(25vh, auto);
+        grid-row-gap: 10px;
+    }
+
+}
+@media (min-width: 760px) {
+    nav {
+        display: block;
+    }
+    #mainheader {
+        background-color: transparent;
+        transition: all .1s ease-in;
+        height: 10vh;
+    }
+    #mainheader label {
+        display: none;
+    }
+    #mainheader p {
+        left: 10%;
+    }
+    #mainheader img {
+        left: 10%;
+    }
+    #mainheader i {
+        display: none;
+    }
+    nav {
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        right: 30px;
+        background-color: var(--color1);
+    }
+    nav li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    nav li a {
+        color: yellow;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    nav li a:hover {
+        border-bottom: 4px solid yellow;
+    }
+    .featured {
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: minmax(40vh,40vh);
+        grid-row-gap: 30px;
+        grid-template-areas: 
+        "onef twof threef fourf";
+    }
+    .sale {
+        width: 80%;
+    }
+    .aboutuscon {
+        flex-direction: row;
+        width: 80%;
+    }
+    .aboutuscon .abouttext {
+        left: -20px;
+        top: 100px;
+    }
+    .articlescon {
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+    .footercon {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .footercon p {
+        text-align: left;
+    }
+    .footercon ul {
+        text-align: left;
+    }
+}
+@media (min-width: 1000px) {
+    .mainbg .mainpcon p:first-child {
+        font-size: 45px;
+    }
+    .mainbg .mainpcon p:nth-child(2) {
+        font-size: 25px;
+    }
+    .mainbg button {
+        font-size: 20px;
+    }
+    .featuredcontainer {
+        width: 90%;
+    }
+    .articlescon {
+        width: 80%;
+        grid-column-gap: 15px;
+    }
+    .newslettercon {
+        width: 60%;
+    }
+    .footercon {
+        grid-template-columns: repeat(5,1fr);
+    }
+}
