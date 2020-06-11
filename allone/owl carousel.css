@@ -1,0 +1,22 @@
+.wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.item {
+    background-color: cadetblue;
+    height: 300px;
+}
+.owl-carousel .owl-nav .owl-prev:hover, .owl-carousel .owl-nav .owl-next:hover {
+    
+}
+.owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: 45%;
+    left: 10px;
+}
+.owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+}
